@@ -427,3 +427,64 @@ body {
   color: #7f3fbf;
   font-weight: bold;
 }
+
+/* Biblioteca */
+.library-filters {
+  padding: 1rem;
+}
+
+.library-filters select {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.library-list li {
+  list-style: none;
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.library-list a {
+  text-decoration: none;
+  color: #7f3fbf;
+}
+
+.library-reader {
+  background: #fff;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.reader-controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.library-stats {
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Carga de documentos */
+.upload-section {
+  padding: 1rem;
+  background: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.upload-section input,
+.upload-section select {
+  margin-right: 0.5rem;
+}
+
+.pending-section {
+  padding: 1rem;
+}
+
+.download-link {
+  margin-left: 0.5rem;
+}

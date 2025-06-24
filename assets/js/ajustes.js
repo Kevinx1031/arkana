@@ -1,0 +1,1 @@
+// Placeholder for ajustes scripts

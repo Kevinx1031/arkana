@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const readingTimer = document.getElementById('reading-timer');
   const markAsReadBtn = document.getElementById('mark-as-read-btn');
   const readsCount = document.getElementById('reads-count');
+
   const roleSelect = document.getElementById('user-role');
   const fileInput = document.getElementById('file-input');
   const fileTitle = document.getElementById('file-title');
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const uploadBtn = document.getElementById('upload-btn');
   const pendingList = document.getElementById('pending-list');
   const pendingSection = document.getElementById('pending-section');
+=======
 
   // Documentos de ejemplo
   const docs = [
@@ -34,7 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
+
   const pendingDocs = [];
+
+=======
 
   let timerInterval = null;
   let elapsedSeconds = 0;
@@ -63,12 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
     filteredDocs.forEach(doc => {
       const li = document.createElement('li');
       const link = document.createElement('a');
+
       link.href = doc.url || doc.file;
+=======
+      link.href = doc.file;
       link.textContent = doc.title;
       link.addEventListener('click', evt => {
         evt.preventDefault();
         openDocument(doc);
       });
+
       const download = document.createElement('a');
       download.href = doc.url || doc.file;
       download.download = doc.title;
@@ -77,11 +86,15 @@ document.addEventListener('DOMContentLoaded', () => {
       li.appendChild(link);
       li.appendChild(document.createTextNode(' '));
       li.appendChild(download);
+=======
+      li.appendChild(link);
+
       documentsList.appendChild(li);
     });
   }
 
   function openDocument(doc) {
+
     if (doc.file && doc.file.endsWith('.txt')) {
       fetch(doc.file)
         .then(res => res.text())
@@ -154,6 +167,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fileInput.value = '';
     fileTitle.value = '';
+=======
+    fetch(doc.file)
+      .then(res => res.text())
+      .then(text => {
+        documentContent.textContent = text;
+        markAsReadBtn.disabled = false;
+        startTimer();
+      })
+      .catch(() => {
+        documentContent.textContent = 'No se pudo cargar el documento.';
+      });
+
   }
 
   markAsReadBtn.addEventListener('click', () => {
@@ -164,16 +189,20 @@ document.addEventListener('DOMContentLoaded', () => {
     readsCount.textContent = parseInt(readsCount.textContent) + 1;
   });
 
+
   uploadBtn.addEventListener('click', handleUpload);
 
   roleSelect.addEventListener('change', () => {
     renderPending();
   });
 
+=======
   categorySelect.addEventListener('change', () => {
     renderDocuments(categorySelect.value);
   });
 
   renderDocuments();
+
   renderPending();
+=======
 });

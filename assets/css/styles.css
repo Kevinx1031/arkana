@@ -312,3 +312,118 @@ footer {
   font-size: 0.8rem;
   color: #999;
 }
+
+/* Perfil page styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #eef0f5, #dfe6ed);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.perfil-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.avatar-box {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.avatar-box img {
+  width: 150px;
+  height: auto;
+  border: 5px solid #7f3fbf;
+  border-radius: 12px;
+  background-color: #000;
+}
+
+.nombre-jugador {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.titulo-jugador {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.estadisticas {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.estadisticas p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.barra-xp {
+  background-color: #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 16px;
+  margin: 5px 0 15px 0;
+}
+
+.barra-xp span {
+  display: block;
+  height: 100%;
+  background-color: #7f3fbf;
+  width: 70%;
+}
+
+.botones button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #7f3fbf;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.botones button:hover {
+  background-color: #5c2d91;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+}
+
+.nav-btn {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+.nav-btn span {
+  display: block;
+  font-size: 18px;
+}
+
+.nav-btn.active {
+  color: #7f3fbf;
+  font-weight: bold;
+}

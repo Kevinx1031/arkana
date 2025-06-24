@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Arkana - Inicio</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- HEADER CON ENTORNO Y AVATAR COMPLETO -->
+  <header class="user-header" id="user-header">
+    <img id="user-avatar" src="assets/images/avatar_default.png" alt="Avatar del usuario" class="avatar-full">
+    <div class="user-stats">
+      <span id="user-level">Nivel 1</span>
+      <span id="user-coins">🪙 0</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sección de bienvenida -->
+    <section class="welcome-section">
+      <h2>¡Bienvenido, Explorador Kevin!</h2>
+      <p>Prepárate para nuevas aventuras hoy.</p>
+    </section>
+
+    <!-- Barra de progreso -->
+    <section class="progress-section">
+      <h3>Tu Progreso</h3>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 60%;"></div>
+        <span id="progress-percentage">60%</span>
+      </div>
+    </section>
+
+    <!-- Noticias/Eventos -->
+    <section class="news-section">
+      <h3>Noticias y Eventos del Aula</h3>
+      <ul id="news-list">
+        <li>🗓️ ¡Nuevo jefe final la próxima semana!</li>
+        <li>🏆 ¡Evento de lectura en la biblioteca disponible!</li>
+        <li>🎉 Se ha desbloqueado una nueva misión de party.</li>
+      </ul>
+    </section>
+
+    <!-- Sección de misiones -->
+    <section class="missions-section">
+      <div class="missions-switcher">
+        <button id="main-missions-btn" class="active">Misiones Principales</button>
+        <button id="side-missions-btn">Misiones Secundarias</button>
+        <button id="party-missions-btn">Misiones de Party</button>
+        <button id="explorer-missions-btn">Misiones de Explorador</button>
+      </div>
+      <div id="missions-carousel" class="missions-carousel">
+        <!-- Las misiones se cargarán dinámicamente desde main.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL PARA DETALLES DE MISIÓN -->
+  <div id="mission-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span id="close-mission-modal" class="close">&times;</span>
+      <h3 id="modal-mission-title">Título de la misión</h3>
+      <img id="modal-mission-image" src="" alt="Imagen de la misión" class="mission-image" style="width: 100%; max-width: 300px;">
+      <p id="modal-mission-lore">Lore de la misión aquí...</p>
+      <p><strong>Requisitos:</strong> <span id="modal-mission-reqs"></span></p>
+      <label for="difficulty-select">Selecciona la dificultad:</label>
+      <select id="difficulty-select">
+        <option value="facil">Fácil</option>
+        <option value="normal">Normal</option>
+        <option value="dificil">Difícil</option>
+      </select>
+      <button id="start-mission-btn">Comenzar Misión</button>
+    </div>
+  </div>
+
+  <!-- NAV INFERIOR -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-btn active"><span>🏠</span><br>Inicio</a>
+    <a href="perfil.html" class="nav-btn"><span>👤</span><br>Perfil</a>
+    <a href="biblioteca.html" class="nav-btn"><span>📚</span><br>Biblioteca</a>
+    <a href="tienda.html" class="nav-btn"><span>🛒</span><br>Tienda</a>
+    <a href="gremios.html" class="nav-btn"><span>🛡️</span><br>Gremios</a>
+    <a href="ajustes.html" class="nav-btn"><span>⚙️</span><br>Ajustes</a>
+  </nav>
+
+  <!-- FOOTER -->
+  <footer>
+    <small>&copy; 2025 Arkana. Todos los derechos reservados.</small>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Biblioteca - Arkana</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Biblioteca</h1>
+  </header>
+
+  <main>
+    <section class="library-filters">
+      <label for="category-select">Filtrar por categoría:</label>
+      <select id="category-select">
+        <option value="todas">Todas</option>
+        <option value="guias">Guías</option>
+        <option value="lore">Lore</option>
+        <option value="tutoriales">Tutoriales</option>
+        <option value="otros">Otros</option>
+      </select>
+    </section>
+
+    <section class="library-list">
+      <ul id="documents-list">
+        <!-- Los documentos se cargarán dinámicamente desde biblioteca.js -->
+      </ul>
+    </section>
+
+    <section class="library-reader">
+      <article id="document-content">
+        <!-- El contenido del documento se mostrará aquí -->
+      </article>
+      <div class="reader-controls">
+        <span id="reading-timer">00:00</span>
+        <button id="mark-as-read-btn" disabled>Marcar como leído</button>
+      </div>
+    </section>
+
+    <section class="library-stats">
+      <div>
+        <strong>Lecturas realizadas:</strong> <span id="reads-count">0</span>
+      </div>
+      <div>
+        <a href="perfil.html">Ver logros y desbloqueos</a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-btn"><span>🏠</span><br>Inicio</a>
+    <a href="perfil.html" class="nav-btn"><span>👤</span><br>Perfil</a>
+    <a href="biblioteca.html" class="nav-btn active"><span>📚</span><br>Biblioteca</a>
+    <a href="tienda.html" class="nav-btn"><span>🛒</span><br>Tienda</a>
+    <a href="gremios.html" class="nav-btn"><span>🛡️</span><br>Gremios</a>
+    <a href="ajustes.html" class="nav-btn"><span>⚙️</span><br>Ajustes</a>
+  </nav>
+
+  <footer>
+    <small>&copy; 2025 Arkana. Todos los derechos reservados.</small>
+  </footer>
+
+  <script src="assets/js/biblioteca.js"></script>
+</body>
+</html>

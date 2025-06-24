@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Ajustes - Arkana</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Ajustes</h1>
+  </header>
+
+  <main>
+    <section class="settings-section">
+      <form id="settings-form">
+        <div class="setting-group">
+          <label for="username-input">Nombre de usuario:</label>
+          <input type="text" id="username-input" name="username">
+          <button type="button" id="save-username-btn">Guardar</button>
+        </div>
+
+        <div class="setting-group">
+          <label for="language-select">Idioma:</label>
+          <select id="language-select" name="language">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+
+        <div class="setting-group">
+          <label for="theme-select">Tema:</label>
+          <select id="theme-select" name="theme">
+            <option value="light">Claro</option>
+            <option value="dark">Oscuro</option>
+          </select>
+        </div>
+
+        <div class="setting-group">
+          <label for="high-contrast-toggle">
+            <input type="checkbox" id="high-contrast-toggle">
+            Alto contraste
+          </label>
+        </div>
+
+        <div class="setting-group">
+          <label for="font-size-select">Tamaño de letra:</label>
+          <select id="font-size-select" name="font-size">
+            <option value="normal">Normal</option>
+            <option value="large">Grande</option>
+            <option value="xlarge">Muy grande</option>
+          </select>
+        </div>
+
+        <div class="setting-group">
+          <label for="notifications-toggle">
+            <input type="checkbox" id="notifications-toggle">
+            Activar notificaciones
+          </label>
+        </div>
+
+        <div class="setting-group">
+          <button type="button" id="contact-dev-btn">Contactar al desarrollador</button>
+        </div>
+
+        <div class="setting-group">
+          <button type="button" id="logout-btn" class="danger">Cerrar sesión</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-btn"><span>🏠</span><br>Inicio</a>
+    <a href="perfil.html" class="nav-btn"><span>👤</span><br>Perfil</a>
+    <a href="biblioteca.html" class="nav-btn"><span>📚</span><br>Biblioteca</a>
+    <a href="tienda.html" class="nav-btn"><span>🛒</span><br>Tienda</a>
+    <a href="gremios.html" class="nav-btn"><span>🛡️</span><br>Gremios</a>
+    <a href="ajustes.html" class="nav-btn active"><span>⚙️</span><br>Ajustes</a>
+  </nav>
+
+  <footer>
+    <small>&copy; 2025 Arkana. Todos los derechos reservados.</small>
+  </footer>
+
+  <script src="assets/js/ajustes.js"></script>
+</body>
+</html>

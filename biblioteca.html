@@ -23,6 +23,30 @@
       </select>
     </section>
 
+    <section class="upload-section">
+      <h2>Subir documento</h2>
+      <label for="user-role">Rol:</label>
+      <select id="user-role">
+        <option value="student">Estudiante</option>
+        <option value="teacher">Docente</option>
+      </select>
+      <input type="file" id="file-input" accept=".pdf,image/*,.txt">
+      <input type="text" id="file-title" placeholder="Título del archivo">
+      <label for="file-category">Categoría:</label>
+      <select id="file-category">
+        <option value="guias">Guías</option>
+        <option value="lore">Lore</option>
+        <option value="tutoriales">Tutoriales</option>
+        <option value="otros">Otros</option>
+      </select>
+      <button id="upload-btn">Subir</button>
+    </section>
+
+    <section id="pending-section" class="pending-section" style="display:none;">
+      <h2>Pendientes de aprobación</h2>
+      <ul id="pending-list"></ul>
+    </section>
+
     <section class="library-list">
       <ul id="documents-list">
         <!-- Los documentos se cargarán dinámicamente desde biblioteca.js -->

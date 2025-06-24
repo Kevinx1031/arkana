@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const readingTimer = document.getElementById('reading-timer');
   const markAsReadBtn = document.getElementById('mark-as-read-btn');
   const readsCount = document.getElementById('reads-count');
+=======
 
   const roleSelect = document.getElementById('user-role');
   const fileInput = document.getElementById('file-input');
@@ -15,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const uploadBtn = document.getElementById('upload-btn');
   const pendingList = document.getElementById('pending-list');
   const pendingSection = document.getElementById('pending-section');
-=======
 
   // Documentos de ejemplo
   const docs = [
@@ -36,6 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
+
+  const pendingDocs = [];
+
+=======
 
   const pendingDocs = [];
 
@@ -71,12 +75,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
       link.href = doc.url || doc.file;
 =======
+
+      link.href = doc.url || doc.file;
+=======
       link.href = doc.file;
+
       link.textContent = doc.title;
       link.addEventListener('click', evt => {
         evt.preventDefault();
         openDocument(doc);
       });
+
+=======
 
       const download = document.createElement('a');
       download.href = doc.url || doc.file;
@@ -86,6 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
       li.appendChild(link);
       li.appendChild(document.createTextNode(' '));
       li.appendChild(download);
+
+=======
 =======
       li.appendChild(link);
 
@@ -94,6 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function openDocument(doc) {
+
+=======
+
 
     if (doc.file && doc.file.endsWith('.txt')) {
       fetch(doc.file)
@@ -167,6 +182,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fileInput.value = '';
     fileTitle.value = '';
+
+=======
 =======
     fetch(doc.file)
       .then(res => res.text())
@@ -190,13 +207,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+=======
+
   uploadBtn.addEventListener('click', handleUpload);
 
   roleSelect.addEventListener('change', () => {
     renderPending();
   });
 
+
 =======
+=======
+
   categorySelect.addEventListener('change', () => {
     renderDocuments(categorySelect.value);
   });
@@ -205,4 +227,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderPending();
 =======
+
+  renderPending();
+=======
+
 });

@@ -306,6 +306,280 @@ body {
 }
 
 /* 🔹 Footer */
+
+footer {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* Perfil page styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #eef0f5, #dfe6ed);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.perfil-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.avatar-box {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.avatar-box img {
+  width: 150px;
+  height: auto;
+  border: 5px solid #7f3fbf;
+  border-radius: 12px;
+  background-color: #000;
+}
+
+.nombre-jugador {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.titulo-jugador {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.estadisticas {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.estadisticas p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.barra-xp {
+  background-color: #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 16px;
+  margin: 5px 0 15px 0;
+}
+
+.barra-xp span {
+  display: block;
+  height: 100%;
+  background-color: #7f3fbf;
+  width: 70%;
+}
+
+.botones button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #7f3fbf;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.botones button:hover {
+  background-color: #5c2d91;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+}
+
+.nav-btn {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+.nav-btn span {
+  display: block;
+  font-size: 18px;
+}
+
+.nav-btn.active {
+  color: #7f3fbf;
+  font-weight: bold;
+}
+
+.page-header {
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(to right, #8B5CF6, #7C3AED);
+  color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+/* Biblioteca */
+.library-filters {
+  background: #fff;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.library-filters select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.library-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.library-list li {
+  background: #fff;
+  margin: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.library-list a {
+  text-decoration: none;
+  color: #7f3fbf;
+  font-weight: bold;
+}
+
+.library-reader {
+  background: #fff;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  min-height: 200px;
+}
+
+.reader-controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.reader-controls button {
+  background-color: #7f3fbf;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.reader-controls button:hover {
+  background-color: #5c2d91;
+}
+
+.library-stats {
+  background: #fff;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Carga de documentos */
+.upload-section {
+  background: #fff;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.upload-section input,
+.upload-section select {
+  margin: 0.5rem 0;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.upload-section button {
+  background-color: #7f3fbf;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.upload-section button:hover {
+  background-color: #5c2d91;
+}
+
+.pending-section {
+  background: #fff;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.pending-section ul {
+  list-style: none;
+  padding: 0;
+}
+.pending-section li {
+  margin-bottom: 0.5rem;
+}
+.pending-section button {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #7f3fbf;
+  color: #fff;
+  cursor: pointer;
+}
+.pending-section button:hover {
+  background-color: #5c2d91;
+}
+
+.download-link {
+  margin-left: 0.5rem;
+  color: #333;
+}
+
+#document-content {
+  white-space: pre-wrap;
+  margin-bottom: 1rem;
+}
+=======
 footer {
   text-align: center;
   padding: 0.5rem;
@@ -490,4 +764,5 @@ body {
   margin-left: 0.5rem;
 }
 =======
+
 
